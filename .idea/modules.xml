@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Book_Lens.iml" filepath="$PROJECT_DIR$/.idea/modules/Book_Lens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Book_Lens.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
