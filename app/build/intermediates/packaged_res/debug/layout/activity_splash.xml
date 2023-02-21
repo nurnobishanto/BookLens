@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    android:background="@drawable/splash_bg"
+    tools:context=".Splash">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/splash_icon"
+        />
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/book_lens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_lens"
+        android:textAppearance="@style/book_lens"
+        android:lineSpacingExtra="-7sp"
+        />
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/lorem_ipsum"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/lorem_ipsum"
+        android:textAppearance="@style/lorem_ipsum"
+        />
+    <Button
+        android:onClick="goMainPage"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/join_us"
+        android:background="@drawable/rectangle_btn"/>
+
+
+
+</LinearLayout>
