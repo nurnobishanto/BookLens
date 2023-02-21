@@ -8,6 +8,12 @@
     android:gravity="center|top"
     android:background="@drawable/bg"
     tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:textSize="15sp"
+        android:layout_marginVertical="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -68,9 +74,14 @@
 
     </LinearLayout>
 
-    <!--button to capture our image-->
-
-
-    <!--button to detect text from our image-->
+    <Button
+        android:layout_marginVertical="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#AE0000"
+        android:text="Logout"
+        android:onClick="Logout"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
 </LinearLayout>

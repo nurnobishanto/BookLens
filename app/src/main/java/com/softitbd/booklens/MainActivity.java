@@ -3,18 +3,29 @@ package com.softitbd.booklens;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
@@ -27,12 +38,14 @@ public class MainActivity extends AppCompatActivity {
     // creating variables for our
     // image view, text view and two buttons.
     private ImageView img;
-    private TextView textview,filter;
+    private TextView textview,filter,name;
     private Button snapBtn;
     private Button detectBtn;
 
     // variable for our image bitmap.
     private Bitmap imageBitmap;
+    private FirebaseAuth mAuth;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +53,30 @@ public class MainActivity extends AppCompatActivity {
         // on below line we are initializing our variables.
         img = (ImageView) findViewById(R.id.image);
         textview = (TextView) findViewById(R.id.text);
+        name = (TextView) findViewById(R.id.name);
         filter = (TextView) findViewById(R.id.filter);
         snapBtn = (Button) findViewById(R.id.snapbtn);
         detectBtn = (Button) findViewById(R.id.detectbtn);
+
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("users").child(user.getUid());
+        // Read from the database
+        myRef.child("name").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e("firebase", "Error getting data", task.getException());
+                }
+                else {
+                    name.setText("Hi, "+String.valueOf(task.getResult().getValue()));
+
+                }
+            }
+        });
+
 
         // adding on click listener for detect button.
         detectBtn.setOnClickListener(new View.OnClickListener() {
@@ -154,4 +188,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void Logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(MainActivity.this,LoginActivity.class));
+        finish();
+    }
 }
