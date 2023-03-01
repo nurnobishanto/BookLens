@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 // handling an error listener.
-                Toast.makeText(MainActivity.this, "Fail to detect the text from image..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Fail to detect the text from image...", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -3592,6 +3592,7 @@ int string abc_searchview_description_voice 0x7f100017
 int string abc_shareactionprovider_share_with 0x7f100018
 int string abc_shareactionprovider_share_with_application 0x7f100019
 int string abc_toolbar_collapse_description 0x7f10001a
+int string androidx_camera_default_config_provider 0x7f1000c9
 int string androidx_startup 0x7f10001b
 int string app_name 0x7f10001c
 int string appbar_scrolling_view_behavior 0x7f10001d
