@@ -38,6 +38,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <activity
+            android:name="com.softitbd.booklens.SelectActivity"
+            android:exported="false" />
+        <activity
             android:name="com.softitbd.booklens.Signup"
             android:exported="false" />
         <activity

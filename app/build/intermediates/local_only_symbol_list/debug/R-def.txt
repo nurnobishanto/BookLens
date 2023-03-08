@@ -20,6 +20,7 @@ drawable splash_bg
 drawable splash_icon
 id book_lens
 id cPassId
+id detect
 id detectbtn
 id emailId
 id filter
@@ -29,12 +30,15 @@ id lorem_ipsum
 id name
 id passId
 id personal_ca
+id select
+id selectbtn
 id sign_in
 id sign_up
 id snapbtn
 id text
 layout activity_login
 layout activity_main
+layout activity_select
 layout activity_signup
 layout activity_splash
 mipmap ic_launcher

@@ -79,7 +79,7 @@ public class Signup extends AppCompatActivity {
                                 // Sign in success, update UI with the signed-in user's information
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 mDatabase.child("users").child(user.getUid()).child("name").setValue(name);
-                                startActivity(new Intent(Signup.this,MainActivity.class));
+                                startActivity(new Intent(Signup.this,SelectActivity.class));
                                 finish();
 
                             } else {

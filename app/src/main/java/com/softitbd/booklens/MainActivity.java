@@ -6,11 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.BackgroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,20 +37,26 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
-    // creating variables for our
-    // image view, text view and two buttons.
-    private ImageView img;
-    private TextView textview,filter,name;
-    private Button snapBtn;
-    private Button detectBtn;
 
-    // variable for our image bitmap.
-    private Bitmap imageBitmap;
+    private static final int SELECT_PICTURE = 200;
+    private static int PICTURE = 0;
+    private ImageView img;
+    private TextView textview,name;
+    private EditText filter;
+    private Button selectBtn,snapBtn;
+    private Button detectBtn;
+    private Uri selectedImageUri;
     private FirebaseAuth mAuth;
+    private Bitmap imageBitmap;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.image);
         textview = (TextView) findViewById(R.id.text);
         name = (TextView) findViewById(R.id.name);
-        filter = (TextView) findViewById(R.id.filter);
+        filter = (EditText) findViewById(R.id.filter);
+        selectBtn = (Button) findViewById(R.id.selectbtn);
         snapBtn = (Button) findViewById(R.id.snapbtn);
         detectBtn = (Button) findViewById(R.id.detectbtn);
 
@@ -83,14 +96,44 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // calling a method to
-                // detect a text .
-                if (filter.getText().toString().isEmpty()){
-                    Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
+                boolean isSnap ;
+                if(PICTURE == 1){
+                    isSnap = true;
+                    if (filter.getText().toString().isEmpty()){
+                        Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
+
+                    }else {
+                        try {
+                            detectTxt(isSnap);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }else if (PICTURE == 2){
+                    isSnap = false;
+                    if (filter.getText().toString().isEmpty()){
+                        Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
+
+                    }else {
+                        try {
+                            detectTxt(isSnap);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
 
                 }else {
-                    detectTxt();
+                    Toast.makeText(MainActivity.this,"Something Wrong!",Toast.LENGTH_LONG).show();
                 }
 
+
+            }
+        });
+        selectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // calling a method to capture our image.
+                imageChooser();
             }
         });
         snapBtn.setOnClickListener(new View.OnClickListener() {
@@ -101,89 +144,115 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    static final int REQUEST_IMAGE_CAPTURE = 1;
+
+
+    static final int REQUEST_IMAGE_CAPTURE = 100;
 
     private void dispatchTakePictureIntent() {
-        // in the method we are displaying an intent to capture our image.
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-        // on below line we are calling a start activity
-        // for result method to get the image captured.
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    private void imageChooser() {
+        Intent i = new Intent();
+        i.setType("image/*");
+        i.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        // calling on activity result method.
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            // on below line we are getting
-            // data from our bundles. .
-            Bundle extras = data.getExtras();
-            imageBitmap = (Bitmap) extras.get("data");
 
-            // below line is to set the
-            // image bitmap to our image.
-            img.setImageBitmap(imageBitmap);
+        if (resultCode == RESULT_OK) {
+            
+            if (requestCode == SELECT_PICTURE) {
+                selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    img.setVisibility(View.VISIBLE);
+                    img.setImageURI(selectedImageUri);
+                    PICTURE =2;
+                }
+            }
+            else if (requestCode == REQUEST_IMAGE_CAPTURE ) {
+                // on below line we are getting
+                // data from our bundles. .
+
+
+                Bundle extras = data.getExtras();
+                imageBitmap = (Bitmap) extras.get("data");
+                img.setVisibility(View.VISIBLE);
+                img.setImageBitmap(imageBitmap);
+                PICTURE =1;
+            }
+
         }
     }
 
-    private void detectTxt() {
-        // this is a method to detect a text from image.
-        // below line is to create variable for firebase
-        // vision image and we are getting image bitmap.
-        FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(imageBitmap);
+    private void detectTxt(boolean isSnap) throws IOException {
+        FirebaseVisionImage image;
+        if (isSnap){
+             image = FirebaseVisionImage.fromBitmap(imageBitmap);
+        }
+        else {
+             image = FirebaseVisionImage.fromFilePath(this,selectedImageUri);
+        }
 
-        // below line is to create a variable for detector and we
-        // are getting vision text detector from our firebase vision.
+
         FirebaseVisionTextDetector detector = FirebaseVision.getInstance().getVisionTextDetector();
-
-        // adding on success listener method to detect the text from image.
         detector.detectInImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
             @Override
             public void onSuccess(FirebaseVisionText firebaseVisionText) {
-                // calling a method to process
-                // our text after extracting.
+              
                 processTxt(firebaseVisionText);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                // handling an error listener.
                 Toast.makeText(MainActivity.this, "Fail to detect the text from image...", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void processTxt(FirebaseVisionText text) {
-        // below line is to create a list of vision blocks which
-        // we will get from our firebase vision text.
+  
         List<FirebaseVisionText.Block> blocks = text.getBlocks();
 
-        // checking if the size of the
-        // block is not equal to zero.
+   
         if (blocks.size() == 0) {
-            // if the size of blocks is zero then we are displaying
-            // a toast message as no text detected.
+          
             Toast.makeText(MainActivity.this, "No Text ", Toast.LENGTH_LONG).show();
             return;
         }
-        // extracting data from each block using a for loop.
+        String txt = "";
         for (FirebaseVisionText.Block block : text.getBlocks()) {
-            // below line is to get text
-            // from each block.
-            String txt = block.getText();
 
-            // below line is to set our
-            // string to our text view.
-
+            textview.setVisibility(View.VISIBLE);
+         
+            txt = txt +" "+block.getText();
             String filterTxt = filter.getText().toString();
-            if (txt.contains(filterTxt)){
-                textview.setText("Matched!");
+            if (txt.toLowerCase(Locale.ROOT).contains(filterTxt.toLowerCase(Locale.ROOT))){
+                textview.setText("matched!\n\n"+txt);
+                setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));
             }else {
                 textview.setText("Detect: "+txt+"\n\n\nResult : Not Matched!");
+            }
+        }
+    }
+
+    private void setHighLightedText(TextView textview, String filterTxt) {
+        String tvt = textview.getText().toString().toLowerCase(Locale.ROOT);
+        int ofe = tvt.indexOf(filterTxt, 0);
+        Spannable wordToSpan = new SpannableString(textview.getText());
+        for (int ofs = 0; ofs < tvt.length() && ofe != -1; ofs = ofe + 1) {
+            ofe = tvt.indexOf(filterTxt, ofs);
+            if (ofe == -1)
+                break;
+            else {
+                // set color here
+                wordToSpan.setSpan(new BackgroundColorSpan(0xFFFFFF00), ofe, ofe + filterTxt.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                textview.setText(wordToSpan, TextView.BufferType.SPANNABLE);
             }
         }
     }

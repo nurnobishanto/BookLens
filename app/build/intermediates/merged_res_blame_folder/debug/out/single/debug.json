@@ -48,6 +48,10 @@
         "source": "com.softitbd.booklens.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "com.softitbd.booklens.app-merged_res-35:/layout_activity_select.xml.flat",
+        "source": "com.softitbd.booklens.app-main-37:/layout/activity_select.xml"
+    },
+    {
         "merged": "com.softitbd.booklens.app-merged_res-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "com.softitbd.booklens.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
     },

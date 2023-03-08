@@ -3014,6 +3014,7 @@ int id design_menu_item_action_area 0x7f08009b
 int id design_menu_item_action_area_stub 0x7f08009c
 int id design_menu_item_text 0x7f08009d
 int id design_navigation_view 0x7f08009e
+int id detect 0x7f080204
 int id detectbtn 0x7f08009f
 int id dialog_button 0x7f0800a0
 int id dimensions 0x7f0800a1
@@ -3257,7 +3258,9 @@ int id search_view_status_bar_spacer 0x7f08018e
 int id search_view_toolbar 0x7f08018f
 int id search_view_toolbar_container 0x7f080190
 int id search_voice_btn 0x7f080191
+int id select 0x7f080205
 int id select_dialog_listview 0x7f080192
+int id selectbtn 0x7f080206
 int id selected 0x7f080193
 int id selection_type 0x7f080194
 int id sharedValueSet 0x7f080195
@@ -3480,6 +3483,7 @@ int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_login 0x7f0b001c
 int layout activity_main 0x7f0b001d
+int layout activity_select 0x7f0b006f
 int layout activity_signup 0x7f0b001e
 int layout activity_splash 0x7f0b001f
 int layout browser_actions_context_menu_page 0x7f0b0020
