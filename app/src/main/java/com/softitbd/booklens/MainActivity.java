@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -39,6 +40,7 @@ import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -141,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // calling a method to capture our image.
                 dispatchTakePictureIntent();
+
+
             }
         });
     }
@@ -176,16 +180,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             else if (requestCode == REQUEST_IMAGE_CAPTURE ) {
-                // on below line we are getting
-                // data from our bundles. .
-
-
-                Bundle extras = data.getExtras();
-                imageBitmap = (Bitmap) extras.get("data");
-                img.setVisibility(View.VISIBLE);
+                Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+                WeakReference<Bitmap> result1 = new WeakReference<Bitmap>(Bitmap.createScaledBitmap(thumbnail,
+                        thumbnail.getWidth(), thumbnail.getHeight(), false).copy(
+                        Bitmap.Config.RGB_565, true));
+                imageBitmap=result1.get();
                 img.setImageBitmap(imageBitmap);
+                img.setVisibility(View.VISIBLE);
                 PICTURE =1;
             }
+
 
         }
     }
