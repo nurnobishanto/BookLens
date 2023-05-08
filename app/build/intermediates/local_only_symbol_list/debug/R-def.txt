@@ -68,6 +68,7 @@ string project_id
 string sign_in
 string sign_up
 string snap
+string tagline
 style Theme.BookLens
 style book_lens
 style dont_have_account

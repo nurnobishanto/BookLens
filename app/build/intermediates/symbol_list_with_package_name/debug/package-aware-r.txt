@@ -3772,6 +3772,7 @@ string sign_in
 string sign_up
 string snap
 string status_bar_notification_info_overflow
+string tagline
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

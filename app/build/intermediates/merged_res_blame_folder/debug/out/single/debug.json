@@ -44,12 +44,12 @@
         "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-37:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-35:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-37:\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-35:\\layout_activity_select.xml.flat",
         "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-37:\\layout\\activity_select.xml"
+    },
+    {
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-37:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-35:\\xml_backup_rules.xml.flat",

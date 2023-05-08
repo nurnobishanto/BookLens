@@ -10,28 +10,29 @@
     <string name="app_name">Book Lens</string>
     <string name="book_lens">Book Lens</string>
     <string name="c_password">Confirm Password</string>
-    <string name="default_web_client_id" translatable="false">1093409617595-ug1heoeuo7jpalsgrel7v69929kqvoc2.apps.googleusercontent.com</string>
+    <string name="default_web_client_id" translatable="false">455879878684-ptdr0b2etk7ipp572ko30hade8s2crcj.apps.googleusercontent.com</string>
     <string name="detect">Detect</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="email_address">Email Address</string>
     <string name="forgot_pass">Forget Password?</string>
-    <string name="gcm_defaultSenderId" translatable="false">1093409617595</string>
-    <string name="google_api_key" translatable="false">AIzaSyC_1vY7YKEFJIiv2CbI0seVdm9TreVLztE</string>
-    <string name="google_app_id" translatable="false">1:1093409617595:android:1be6e036e42fa91fec9b9e</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC_1vY7YKEFJIiv2CbI0seVdm9TreVLztE</string>
-    <string name="google_storage_bucket" translatable="false">book-lens-7a99c.appspot.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">455879878684</string>
+    <string name="google_api_key" translatable="false">AIzaSyDhQy3OEha0wsBgaAGsMpCedXdf3zJARCY</string>
+    <string name="google_app_id" translatable="false">1:455879878684:android:3412b7c0d5aa6589b017d9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDhQy3OEha0wsBgaAGsMpCedXdf3zJARCY</string>
+    <string name="google_storage_bucket" translatable="false">book-lens-ade26.appspot.com</string>
     <string name="have_account">Already have an account</string>
     <string name="join_us">Join us</string>
-    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consecrated advising elite.</string>
     <string name="name">Name</string>
     <string name="or_sign_in">Or sign in with</string>
     <string name="or_sign_up">Or sign up with</string>
     <string name="password">Password</string>
     <string name="personal_ca">Personal cabinet</string>
-    <string name="project_id" translatable="false">book-lens-7a99c</string>
+    <string name="project_id" translatable="false">book-lens-ade26</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_up">Sign up</string>
     <string name="snap">Snap</string>
+    <string name="tagline">𝘚𝘰 𝘮𝘢𝘯𝘺 𝘣𝘰𝘰𝘬𝘴, 𝘴𝘰 𝘭𝘪𝘵𝘵𝘭𝘦 𝘵𝘪𝘮𝘦</string>
     <style name="Theme.BookLens" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

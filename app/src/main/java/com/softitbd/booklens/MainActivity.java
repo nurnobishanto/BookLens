@@ -39,6 +39,7 @@ import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
@@ -50,6 +51,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private static final int SELECT_PICTURE = 200;
+
     private static int PICTURE = 0;
     private ImageView img;
     private TextView textview,name;
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         selectBtn = (Button) findViewById(R.id.selectbtn);
         snapBtn = (Button) findViewById(R.id.snapbtn);
         detectBtn = (Button) findViewById(R.id.detectbtn);
+        snapBtn.setVisibility(View.INVISIBLE);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
@@ -145,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 dispatchTakePictureIntent();
 
 
+
             }
         });
     }
@@ -180,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             else if (requestCode == REQUEST_IMAGE_CAPTURE ) {
+
                 Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
                 WeakReference<Bitmap> result1 = new WeakReference<Bitmap>(Bitmap.createScaledBitmap(thumbnail,
                         thumbnail.getWidth(), thumbnail.getHeight(), false).copy(
@@ -191,8 +196,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+
         }
     }
+
+
 
     private void detectTxt(boolean isSnap) throws IOException {
         FirebaseVisionImage image;
@@ -237,14 +245,23 @@ public class MainActivity extends AppCompatActivity {
             txt = txt +" "+block.getText();
             String filterTxt = filter.getText().toString();
             if (txt.toLowerCase(Locale.ROOT).contains(filterTxt.toLowerCase(Locale.ROOT))){
-                textview.setText("matched!\n\n"+txt);
-                setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));
+                textview.setText("Matched and Count : "+countWord(txt.toLowerCase(Locale.ROOT),filterTxt.toLowerCase(Locale.ROOT)));
+                //setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));
             }else {
                 textview.setText("Detect: "+txt+"\n\n\nResult : Not Matched!");
             }
         }
     }
-
+    public int countWord(String text, String searchWord) {
+        int count = 0;
+        String[] words = text.split("\\s+");
+        for (String word : words) {
+            if (word.equals(searchWord)) {
+                count++;
+            }
+        }
+        return count;
+    }
     private void setHighLightedText(TextView textview, String filterTxt) {
         String tvt = textview.getText().toString().toLowerCase(Locale.ROOT);
         int ofe = tvt.indexOf(filterTxt, 0);
