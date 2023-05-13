@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-33:/values-land/values-land.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-35:/values-land/values-land.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\b4d1ba64022591561c44e4c11c515868\\transformed\\material-1.8.0\\res\\values-land\\values-land.xml",

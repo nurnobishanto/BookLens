@@ -44,24 +44,18 @@
                 />
 
             <!--text view to display our extracted text-->
-            <TextView
-                android:visibility="gone"
-                android:layout_margin="15dp"
-                android:id="@+id/text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_marginHorizontal="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <Button
-                    android:id="@+id/selectbtn"
+                    android:id="@+id/snapbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rectangle_btn"
-                    android:text="Pick Image"
+                    android:text="Snap"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
@@ -82,23 +76,29 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="15dp"
+                android:textSize="22dp"
+                android:textColor="#006204"
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="15dp"
+                android:id="@+id/text"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
             <LinearLayout
                 android:layout_margin="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <Button
-                    android:id="@+id/snapbtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rectangle_btn"
-                    android:text="Snap"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="1"
-                    android:textAllCaps="false"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

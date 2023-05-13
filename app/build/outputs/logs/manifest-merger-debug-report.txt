@@ -1,12 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\mdnur\.gradle\caches\transforms-3\b4d1ba64022591561c44e4c11c515868\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mdnur\.gradle\caches\transforms-3\4e1487526e896a8ac4f5952b0f3ca1f4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:2:1-42:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mdnur\.gradle\caches\transforms-3\f54945315ce655c28050d18606a41ebe\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.yalantis:ucrop:2.2.6] C:\Users\mdnur\.gradle\caches\transforms-3\2696fae257ea2e6646904bed88766a1a\transformed\ucrop-2.2.6\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\mdnur\.gradle\caches\transforms-3\724b77b8afaec52072f7b409a6316813\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\da0a6b6a926a24c78daef043db210dda\transformed\firebase-auth-21.1.0\AndroidManifest.xml:17:1-73:12
 MERGED from [com.google.firebase:firebase-ml-vision:15.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\f8ba9bb73f1455e4ec1185e9def20b66\transformed\firebase-ml-vision-15.0.0\AndroidManifest.xml:2:1-8:12
@@ -55,7 +57,8 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\mdnur\.gradle\
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\964a9174b697910b5c07d6b736b95beb\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\1b805ebdcdc4a6dd1d5012d503b61110\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\e3312df8edbf6c54aff67643184ddc0a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\6fda09f719e6ab99c6171bb6b51e6dbf\transformed\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\mdnur\.gradle\caches\transforms-3\ff45e6c58b6efbf314070a0828dee0d2\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\f0a208edf1c3671384ad8468b23e8f0b\transformed\documentfile-1.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mdnur\.gradle\caches\transforms-3\83f9de8fb05a8c49d170906826356488\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\b267a9a1849d152a00b167d4b0007eee\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\mdnur\.gradle\caches\transforms-3\dd62bd8887b2e5cc65fb3f3ed0bfe346\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
@@ -64,25 +67,24 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\mdnur\.g
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\1ab5682f404c02255289f0c563a10660\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\bdc064192d16d4cb0f24e95c784ad554\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\ba3f7487c6e213e2e1662904db9f2d41\transformed\firebase-components-17.1.0\AndroidManifest.xml:15:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\8ad5a94ef3cd3128fae738f5bc7e73b3\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\e64b017716d7d90ff5b24e2f0899312d\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\1152873a663430d9245e0fc2123fa972\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
 	package
 		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:4:5-36
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:1-50:12
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:2:11-69
@@ -112,12 +114,18 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:13:5-76
 	android:name
 		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:13:22-73
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:15:5-70
+	android:name
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:15:19-67
 application
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:15:5-46:19
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:17:5-48:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\mdnur\.gradle\caches\transforms-3\b4d1ba64022591561c44e4c11c515868\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\mdnur\.gradle\caches\transforms-3\b4d1ba64022591561c44e4c11c515868\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mdnur\.gradle\caches\transforms-3\4e1487526e896a8ac4f5952b0f3ca1f4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mdnur\.gradle\caches\transforms-3\4e1487526e896a8ac4f5952b0f3ca1f4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:21:5-40:19
+MERGED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:21:5-40:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\da0a6b6a926a24c78daef043db210dda\transformed\firebase-auth-21.1.0\AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\da0a6b6a926a24c78daef043db210dda\transformed\firebase-auth-21.1.0\AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.android.gms:play-services-vision:20.1.3] C:\Users\mdnur\.gradle\caches\transforms-3\b2cfd9fe13131fea160dac1e6516c431\transformed\play-services-vision-20.1.3\AndroidManifest.xml:7:5-20
@@ -159,63 +167,63 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\md
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\mdnur\.gradle\caches\transforms-3\9ba9a08ec49d36f6dd0441a605723113\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:22:9-35
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:24:9-35
 	android:label
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:20:9-41
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:22:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:18:9-54
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:20:9-54
 	android:roundIcon
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:21:9-54
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:23:9-54
 	tools:targetApi
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:24:9-29
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:26:9-29
 	android:icon
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:19:9-43
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:21:9-43
 	android:allowBackup
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:18:9-35
 	android:theme
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:23:9-65
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:25:9-65
 	android:dataExtractionRules
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:17:9-65
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:19:9-65
 activity#com.softitbd.booklens.SelectActivity
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:25:9-27:40
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:27:9-29:40
 	android:exported
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:26:13-43
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:28:13-43
 activity#com.softitbd.booklens.Signup
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:28:9-30:40
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:30:9-32:40
 	android:exported
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:29:13-35
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:31:13-35
 activity#com.softitbd.booklens.LoginActivity
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:31:9-33:40
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:33:9-35:40
 	android:exported
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:33:13-37
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:32:13-42
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:34:13-42
 activity#com.softitbd.booklens.Splash
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:34:9-42:20
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:36:9-44:20
 	android:exported
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:36:13-36
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:38:13-36
 	android:name
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:35:13-35
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:37:13-35
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:37:13-41:29
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:38:17-69
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:38:25-66
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:40:17-77
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:40:27-74
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:42:27-74
 activity#com.softitbd.booklens.MainActivity
-ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:43:9-45:39
+ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:45:9-47:39
 	android:exported
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:45:13-36
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:47:13-36
 	android:name
-		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:44:13-41
+		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml:46:13-41
 uses-sdk
 INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
@@ -224,8 +232,12 @@ MERGED from [com.google.android.material:material:1.8.0] C:\Users\mdnur\.gradle\
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\mdnur\.gradle\caches\transforms-3\b4d1ba64022591561c44e4c11c515868\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mdnur\.gradle\caches\transforms-3\4e1487526e896a8ac4f5952b0f3ca1f4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mdnur\.gradle\caches\transforms-3\4e1487526e896a8ac4f5952b0f3ca1f4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mdnur\.gradle\caches\transforms-3\f54945315ce655c28050d18606a41ebe\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\mdnur\.gradle\caches\transforms-3\f54945315ce655c28050d18606a41ebe\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.yalantis:ucrop:2.2.6] C:\Users\mdnur\.gradle\caches\transforms-3\2696fae257ea2e6646904bed88766a1a\transformed\ucrop-2.2.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6] C:\Users\mdnur\.gradle\caches\transforms-3\2696fae257ea2e6646904bed88766a1a\transformed\ucrop-2.2.6\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\mdnur\.gradle\caches\transforms-3\724b77b8afaec52072f7b409a6316813\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\mdnur\.gradle\caches\transforms-3\724b77b8afaec52072f7b409a6316813\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\da0a6b6a926a24c78daef043db210dda\transformed\firebase-auth-21.1.0\AndroidManifest.xml:21:5-44
@@ -322,8 +334,10 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\mdnur\.gradle\caches\tra
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\1b805ebdcdc4a6dd1d5012d503b61110\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\e3312df8edbf6c54aff67643184ddc0a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\e3312df8edbf6c54aff67643184ddc0a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\6fda09f719e6ab99c6171bb6b51e6dbf\transformed\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\6fda09f719e6ab99c6171bb6b51e6dbf\transformed\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\mdnur\.gradle\caches\transforms-3\ff45e6c58b6efbf314070a0828dee0d2\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\mdnur\.gradle\caches\transforms-3\ff45e6c58b6efbf314070a0828dee0d2\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\f0a208edf1c3671384ad8468b23e8f0b\transformed\documentfile-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\f0a208edf1c3671384ad8468b23e8f0b\transformed\documentfile-1.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mdnur\.gradle\caches\transforms-3\83f9de8fb05a8c49d170906826356488\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\mdnur\.gradle\caches\transforms-3\83f9de8fb05a8c49d170906826356488\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\b267a9a1849d152a00b167d4b0007eee\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -340,8 +354,6 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mdnur\.gradle\ca
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\bdc064192d16d4cb0f24e95c784ad554\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\ba3f7487c6e213e2e1662904db9f2d41\transformed\firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-components:17.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\ba3f7487c6e213e2e1662904db9f2d41\transformed\firebase-components-17.1.0\AndroidManifest.xml:18:5-20:41
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\8ad5a94ef3cd3128fae738f5bc7e73b3\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\8ad5a94ef3cd3128fae738f5bc7e73b3\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\e64b017716d7d90ff5b24e2f0899312d\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\mdnur\.gradle\caches\transforms-3\e64b017716d7d90ff5b24e2f0899312d\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\1152873a663430d9245e0fc2123fa972\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
@@ -356,6 +368,52 @@ INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\Android
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mdnur\AndroidStudioProjects\BookLens\app\src\main\AndroidManifest.xml
+queries
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:9:5-19:15
+intent#action:name:android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:12:9-14:18
+action#android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:13:13-73
+	android:name
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:13:21-70
+intent#action:name:android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:16:9-18:18
+action#android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:17:13-79
+	android:name
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:17:21-76
+activity#com.github.dhaval2404.imagepicker.ImagePickerActivity
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:22:9-25:68
+	android:screenOrientation
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:24:13-52
+	android:theme
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:25:13-65
+	android:name
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:23:13-81
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:26:9-29:72
+	android:screenOrientation
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:28:13-49
+	android:theme
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:27:13-60
+provider#com.github.dhaval2404.imagepicker.ImagePickerFileProvider
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:31:9-39:20
+	android:grantUriPermissions
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:35:13-47
+	android:authorities
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:33:13-72
+	android:exported
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:32:13-85
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:36:13-38:71
+	android:resource
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:38:17-68
+	android:name
+		ADDED from [com.github.Dhaval2404:ImagePicker:v2.1] C:\Users\mdnur\.gradle\caches\transforms-3\0c92602ba1aba30df7af12882ef77f30\transformed\ImagePicker-v2.1\AndroidManifest.xml:37:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:21.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\da0a6b6a926a24c78daef043db210dda\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-database:20.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\f26aa3810345dba316bae61c7476b9ac\transformed\firebase-database-20.1.0\AndroidManifest.xml:24:5-79

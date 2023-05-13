@@ -1,6 +1,7 @@
 package com.softitbd.booklens;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -22,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -50,17 +52,16 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int SELECT_PICTURE = 200;
+
 
     private static int PICTURE = 0;
     private ImageView img;
-    private TextView textview,name;
+    private TextView textview,name,count;
     private EditText filter;
-    private Button selectBtn,snapBtn;
+    private Button snapBtn;
     private Button detectBtn;
     private Uri selectedImageUri;
     private FirebaseAuth mAuth;
-    private Bitmap imageBitmap;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,12 +70,13 @@ public class MainActivity extends AppCompatActivity {
         // on below line we are initializing our variables.
         img = (ImageView) findViewById(R.id.image);
         textview = (TextView) findViewById(R.id.text);
+        count = (TextView) findViewById(R.id.count);
         name = (TextView) findViewById(R.id.name);
         filter = (EditText) findViewById(R.id.filter);
-        selectBtn = (Button) findViewById(R.id.selectbtn);
+
         snapBtn = (Button) findViewById(R.id.snapbtn);
         detectBtn = (Button) findViewById(R.id.detectbtn);
-        snapBtn.setVisibility(View.INVISIBLE);
+
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
@@ -101,51 +103,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // calling a method to
-                boolean isSnap ;
-                if(PICTURE == 1){
-                    isSnap = true;
                     if (filter.getText().toString().isEmpty()){
                         Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
 
                     }else {
                         try {
-                            detectTxt(isSnap);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }else if (PICTURE == 2){
-                    isSnap = false;
-                    if (filter.getText().toString().isEmpty()){
-                        Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
-
-                    }else {
-                        try {
-                            detectTxt(isSnap);
+                            detectTxt();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     }
 
-                }else {
-                    Toast.makeText(MainActivity.this,"Something Wrong!",Toast.LENGTH_LONG).show();
-                }
+
 
 
             }
         });
-        selectBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // calling a method to capture our image.
-                imageChooser();
-            }
-        });
+
         snapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // calling a method to capture our image.
-                dispatchTakePictureIntent();
+                ImagePicker.with(MainActivity.this)
+                        .crop()
+                        .start();
 
 
 
@@ -154,64 +134,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    static final int REQUEST_IMAGE_CAPTURE = 100;
 
-    private void dispatchTakePictureIntent() {
-
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
-    }
-
-    private void imageChooser() {
-        Intent i = new Intent();
-        i.setType("image/*");
-        i.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
-    }
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+        // Image Uri will not be null for RESULT_OK
+             selectedImageUri = data.getData();
+            // Use Uri object instead of File to avoid storage permissions
+            img.setImageURI(selectedImageUri);
 
-        if (resultCode == RESULT_OK) {
-            
-            if (requestCode == SELECT_PICTURE) {
-                selectedImageUri = data.getData();
-                if (null != selectedImageUri) {
-                    img.setVisibility(View.VISIBLE);
-                    img.setImageURI(selectedImageUri);
-                    PICTURE =2;
-                }
-            }
-            else if (requestCode == REQUEST_IMAGE_CAPTURE ) {
+            img.setVisibility(View.VISIBLE);
+            count.setVisibility(View.GONE);
+            textview.setVisibility(View.GONE);
+            img.setImageURI(selectedImageUri);
 
-                Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-                WeakReference<Bitmap> result1 = new WeakReference<Bitmap>(Bitmap.createScaledBitmap(thumbnail,
-                        thumbnail.getWidth(), thumbnail.getHeight(), false).copy(
-                        Bitmap.Config.RGB_565, true));
-                imageBitmap=result1.get();
-                img.setImageBitmap(imageBitmap);
-                img.setVisibility(View.VISIBLE);
-                PICTURE =1;
-            }
-
-
-
+        } else if (resultCode == ImagePicker.RESULT_ERROR) {
+            Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show();
         }
     }
-
-
-
-    private void detectTxt(boolean isSnap) throws IOException {
+    private void detectTxt() throws IOException {
         FirebaseVisionImage image;
-        if (isSnap){
-             image = FirebaseVisionImage.fromBitmap(imageBitmap);
-        }
-        else {
-             image = FirebaseVisionImage.fromFilePath(this,selectedImageUri);
-        }
-
-
+        image = FirebaseVisionImage.fromFilePath(this,selectedImageUri);
         FirebaseVisionTextDetector detector = FirebaseVision.getInstance().getVisionTextDetector();
         detector.detectInImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
             @Override
@@ -241,31 +187,27 @@ public class MainActivity extends AppCompatActivity {
         for (FirebaseVisionText.Block block : text.getBlocks()) {
 
             textview.setVisibility(View.VISIBLE);
-         
+            count.setVisibility(View.VISIBLE);
+
             txt = txt +" "+block.getText();
             String filterTxt = filter.getText().toString();
             if (txt.toLowerCase(Locale.ROOT).contains(filterTxt.toLowerCase(Locale.ROOT))){
-                textview.setText("Matched and Count : "+countWord(txt.toLowerCase(Locale.ROOT),filterTxt.toLowerCase(Locale.ROOT)));
-                //setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));
+                textview.setText("Detect: "+txt);
+                setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));
             }else {
-                textview.setText("Detect: "+txt+"\n\n\nResult : Not Matched!");
+                count.setText("Result : Not Matched!");
+                textview.setText("Detect: "+txt);
+
             }
         }
     }
-    public int countWord(String text, String searchWord) {
-        int count = 0;
-        String[] words = text.split("\\s+");
-        for (String word : words) {
-            if (word.equals(searchWord)) {
-                count++;
-            }
-        }
-        return count;
-    }
+
     private void setHighLightedText(TextView textview, String filterTxt) {
+
         String tvt = textview.getText().toString().toLowerCase(Locale.ROOT);
         int ofe = tvt.indexOf(filterTxt, 0);
         Spannable wordToSpan = new SpannableString(textview.getText());
+        int cnt=0;
         for (int ofs = 0; ofs < tvt.length() && ofe != -1; ofs = ofe + 1) {
             ofe = tvt.indexOf(filterTxt, ofs);
             if (ofe == -1)
@@ -274,8 +216,12 @@ public class MainActivity extends AppCompatActivity {
                 // set color here
                 wordToSpan.setSpan(new BackgroundColorSpan(0xFFFFFF00), ofe, ofe + filterTxt.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                 textview.setText(wordToSpan, TextView.BufferType.SPANNABLE);
+                cnt++;
+
             }
         }
+        count.setText("Matched and Count : "+cnt);
+
     }
 
     public void Logout(View view) {

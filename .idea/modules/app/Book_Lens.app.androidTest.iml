@@ -121,6 +121,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-appcheck-interop:16.1.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-database-collection:18.0.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.camera:camera-core:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.Dhaval2404:ImagePicker:v2.1@aar" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="Book_Lens.app.main" />
 </module>

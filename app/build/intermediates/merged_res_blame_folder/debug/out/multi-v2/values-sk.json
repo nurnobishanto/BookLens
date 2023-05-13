@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-33:/values-sk/values-sk.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-35:/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\b4d1ba64022591561c44e4c11c515868\\transformed\\material-1.8.0\\res\\values-sk\\values-sk.xml",
@@ -105,6 +105,23 @@
                         "startOffsets": "3844,3950,4110,4234,4344,4500,4628,4741,4982,5151,5262,5432,5562,5725,5889,5957,6024",
                         "endColumns": "105,159,123,109,155,127,112,101,168,110,169,129,162,163,67,66,86",
                         "endOffsets": "3945,4105,4229,4339,4495,4623,4736,4838,5146,5257,5427,5557,5720,5884,5952,6019,6106"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\2696fae257ea2e6646904bed88766a1a\\transformed\\ucrop-2.2.6\\res\\values-sk\\values-sk.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,182",
+                        "endColumns": "69,56,50",
+                        "endOffsets": "120,177,228"
+                    },
+                    "to": {
+                        "startLines": "121,122,123",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "10892,10962,11019",
+                        "endColumns": "69,56,50",
+                        "endOffsets": "10957,11014,11065"
                     }
                 }
             ]

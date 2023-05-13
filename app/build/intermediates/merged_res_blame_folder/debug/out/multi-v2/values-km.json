@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-33:/values-km/values-km.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-35:/values-km/values-km.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\724b77b8afaec52072f7b409a6316813\\transformed\\appcompat-1.6.1\\res\\values-km\\values-km.xml",

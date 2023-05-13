@@ -20,6 +20,7 @@ drawable splash_bg
 drawable splash_icon
 id book_lens
 id cPassId
+id count
 id detect
 id detectbtn
 id emailId
@@ -31,7 +32,6 @@ id name
 id passId
 id personal_ca
 id select
-id selectbtn
 id sign_in
 id sign_up
 id snapbtn

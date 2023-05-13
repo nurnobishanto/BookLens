@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-33:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-35:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\9ba9a08ec49d36f6dd0441a605723113\\transformed\\core-1.9.0\\res\\values-zh-rTW\\values-zh-rTW.xml",
@@ -54,6 +54,23 @@
                         "startOffsets": "3477,3578,3706,3821,3923,4030,4146,4246,4444,4554,4655,4784,4899,5001,5109,5165,5222",
                         "endColumns": "100,127,114,101,106,115,99,94,109,100,128,114,101,107,55,56,73",
                         "endOffsets": "3573,3701,3816,3918,4025,4141,4241,4336,4549,4650,4779,4894,4996,5104,5160,5217,5291"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\2696fae257ea2e6646904bed88766a1a\\transformed\\ucrop-2.2.6\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,132,186,240,287",
+                        "endColumns": "76,53,53,46,116",
+                        "endOffsets": "127,181,235,282,399"
+                    },
+                    "to": {
+                        "startLines": "119,120,121,122,123",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "9521,9598,9652,9706,9753",
+                        "endColumns": "76,53,53,46,116",
+                        "endOffsets": "9593,9647,9701,9748,9865"
                     }
                 },
                 {
