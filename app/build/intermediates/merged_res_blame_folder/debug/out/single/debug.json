@@ -1,126 +1,134 @@
 [
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_round_bg.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\round_bg.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\xml\\backup_rules.xml"
+        "merged": "com.softitbd.booklens.app-merged_res-38:/layout_activity_main.xml.flat",
+        "source": "com.softitbd.booklens.app-main-40:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_bg.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\bg.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_input_bg.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\input_bg.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\layout_activity_signup.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\layout\\activity_signup.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_error.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\error.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_round_bg.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\round_bg.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\layout_activity_select.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\layout\\activity_select.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_input_bg.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\input_bg.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_splash_icon.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\splash_icon.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_google_plus.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\google_plus.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_loading.gif.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\loading.gif"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_f.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\f.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_splash_bg.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\splash_bg.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\layout_activity_splash.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\layout\\activity_splash.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_bg.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\bg.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_rectangle_btn.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\rectangle_btn.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_camera.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\camera.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_f.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\f.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_google_plus.png.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\google_plus.png"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_rectangle_btn.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\rectangle_btn.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.softitbd.booklens.app-merged_res-37:/layout_activity_main.xml.flat",
-        "source": "com.softitbd.booklens.app-main-39:/layout/activity_main.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_splash_icon.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\splash_icon.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\layout_activity_select.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\layout\\activity_select.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\drawable_splash_bg.png.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\drawable\\splash_bg.png"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\layout\\activity_signup.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-37:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-39:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-merged_res-38:\\drawable_camera.xml.flat",
+        "source": "C:\\Users\\mdnur\\.gradle\\daemon\\7.3.3\\com.softitbd.booklens.app-main-40:\\drawable\\camera.xml"
     }
 ]

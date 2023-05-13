@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-35:/values-af/values-af.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-36:/values-af/values-af.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\9eed1c99ee0f7ba978eb857e74c51bc1\\transformed\\browser-1.4.0\\res\\values-af\\values-af.xml",

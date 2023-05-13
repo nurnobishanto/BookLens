@@ -2826,6 +2826,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable error
 drawable f
 drawable google_plus
 drawable googleg_disabled_color_18
@@ -2847,6 +2848,7 @@ drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_search_black_24
 drawable input_bg
+drawable loading
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3161,6 +3163,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3209,6 +3212,7 @@ id line3
 id linear
 id listMode
 id list_item
+id load
 id lorem_ipsum
 id lytCameraPick
 id lytGalleryPick

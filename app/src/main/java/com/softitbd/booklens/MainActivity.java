@@ -20,9 +20,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
     private Button detectBtn;
     private Uri selectedImageUri;
     private FirebaseAuth mAuth;
+    private ProgressBar pb;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,11 +76,13 @@ public class MainActivity extends AppCompatActivity {
         count = (TextView) findViewById(R.id.count);
         name = (TextView) findViewById(R.id.name);
         filter = (EditText) findViewById(R.id.filter);
+        pb = (ProgressBar) findViewById(R.id.load);
+        pb.setVisibility(View.GONE);
 
         snapBtn = (Button) findViewById(R.id.snapbtn);
         detectBtn = (Button) findViewById(R.id.detectbtn);
 
-
+        detectBtn.setVisibility(View.INVISIBLE);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
 
@@ -114,9 +119,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
 
-
-
-
             }
         });
 
@@ -125,10 +127,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ImagePicker.with(MainActivity.this)
                         .crop()
+                        .compress(3072)
                         .start();
-
-
-
+                img.setVisibility(View.GONE);
+                pb.setVisibility(View.VISIBLE);
+                detectBtn.setVisibility(View.INVISIBLE);
             }
         });
     }
@@ -142,12 +145,21 @@ public class MainActivity extends AppCompatActivity {
         // Image Uri will not be null for RESULT_OK
              selectedImageUri = data.getData();
             // Use Uri object instead of File to avoid storage permissions
-            img.setImageURI(selectedImageUri);
+         //   img.setImageURI(selectedImageUri);
 
-            img.setVisibility(View.VISIBLE);
+
             count.setVisibility(View.GONE);
             textview.setVisibility(View.GONE);
             img.setImageURI(selectedImageUri);
+            pb.setVisibility(View.GONE);
+            detectBtn.setVisibility(View.VISIBLE);
+            img.setVisibility(View.VISIBLE);
+            // Load image using Glide
+            Glide.with(this)
+                    .load(selectedImageUri)
+                    .placeholder(R.drawable.loading)
+                    .error(R.drawable.error)
+                    .into(img);
 
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
             Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show();
@@ -190,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
             count.setVisibility(View.VISIBLE);
 
             txt = txt +" "+block.getText();
-            String filterTxt = filter.getText().toString();
+            String filterTxt = filter.getText().toString().trim();
             if (txt.toLowerCase(Locale.ROOT).contains(filterTxt.toLowerCase(Locale.ROOT))){
                 textview.setText("Detect: "+txt);
                 setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));

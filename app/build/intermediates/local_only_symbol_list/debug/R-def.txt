@@ -9,11 +9,13 @@ color teal_700
 color white
 drawable bg
 drawable camera
+drawable error
 drawable f
 drawable google_plus
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable input_bg
+drawable loading
 drawable rectangle_btn
 drawable round_bg
 drawable splash_bg
@@ -27,6 +29,7 @@ id emailId
 id filter
 id forgot_pass
 id image
+id load
 id lorem_ipsum
 id name
 id passId
