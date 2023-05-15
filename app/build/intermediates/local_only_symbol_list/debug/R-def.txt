@@ -25,6 +25,7 @@ id cPassId
 id count
 id detect
 id detectbtn
+id detectbtn2
 id emailId
 id filter
 id forgot_pass

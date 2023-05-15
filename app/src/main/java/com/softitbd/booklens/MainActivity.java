@@ -8,6 +8,12 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -40,7 +46,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
-import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
+//import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
+import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
+import com.ortiz.touchview.TouchImageView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -57,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static int PICTURE = 0;
-    private ImageView img;
+    private TouchImageView img;
     private TextView textview,name,count;
     private EditText filter;
     private Button snapBtn;
-    private Button detectBtn;
+    private Button detectBtn,detectBtn2;
     private Uri selectedImageUri;
     private FirebaseAuth mAuth;
     private ProgressBar pb;
@@ -71,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // on below line we are initializing our variables.
-        img = (ImageView) findViewById(R.id.image);
+        img = (TouchImageView) findViewById(R.id.image);
         textview = (TextView) findViewById(R.id.text);
         count = (TextView) findViewById(R.id.count);
         name = (TextView) findViewById(R.id.name);
@@ -81,10 +89,44 @@ public class MainActivity extends AppCompatActivity {
 
         snapBtn = (Button) findViewById(R.id.snapbtn);
         detectBtn = (Button) findViewById(R.id.detectbtn);
+        detectBtn2 = (Button) findViewById(R.id.detectbtn2);
 
         detectBtn.setVisibility(View.INVISIBLE);
+        detectBtn2.setVisibility(View.INVISIBLE);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
+
+        detectBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseVisionTextRecognizer textRecognizer = FirebaseVision.getInstance()
+                        .getOnDeviceTextRecognizer();
+                Bitmap bitmap = ((BitmapDrawable) img.getDrawable()).getBitmap();
+                FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
+
+                textRecognizer.processImage(image)
+                        .addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
+                            @Override
+                            public void onSuccess(FirebaseVisionText firebaseVisionText) {
+                                // Process the detected text
+                                if (filter.getText().toString().isEmpty()){
+                                    Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
+
+                                }else {
+                                    processDetectedText(firebaseVisionText,bitmap);
+                                }
+
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Handle the failure
+                            }
+                        });
+
+            }
+        });
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users").child(user.getUid());
@@ -112,11 +154,11 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
 
                     }else {
-                        try {
-                            detectTxt();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+//                        try {
+//                            detectTxt();
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
                     }
 
             }
@@ -132,8 +174,51 @@ public class MainActivity extends AppCompatActivity {
                 img.setVisibility(View.GONE);
                 pb.setVisibility(View.VISIBLE);
                 detectBtn.setVisibility(View.INVISIBLE);
+
             }
         });
+    }
+
+    private void processDetectedText(FirebaseVisionText firebaseVisionText, Bitmap bitmap) {
+        int c = 0;
+        // 4. Process the recognized text results
+        for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
+            for (FirebaseVisionText.Line line : block.getLines()) {
+                for (FirebaseVisionText.Element element : line.getElements()) {
+                    // Access the extracted text and its metadata
+                    String text = element.getText();
+
+                    Rect boundingBox = element.getBoundingBox();
+                    if (text.toLowerCase(Locale.ROOT).equals(filter.getText().toString().toLowerCase(Locale.ROOT).trim())){
+                        drawBoundingBoxOnImage(boundingBox, bitmap);
+                        c++;
+                        Toast.makeText(MainActivity.this,"Detected",Toast.LENGTH_LONG).show();
+                    }
+
+                    // Highlight the text in the image (e.g., by drawing bounding boxes)
+
+                }
+            }
+        }
+        count.setVisibility(View.VISIBLE);
+        count.setText("Detected : "+c);
+        detectBtn2.setVisibility(View.INVISIBLE);
+    }
+    private void drawBoundingBoxOnImage(Rect boundingBox, Bitmap bitmap) {
+        Bitmap mutableBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+        Canvas canvas = new Canvas(mutableBitmap);
+
+        // Define the paint properties for the bounding box
+        Paint paint = new Paint();
+        paint.setColor(Color.RED);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(2f);
+
+        // Draw the bounding box on the canvas
+        canvas.drawRect(boundingBox, paint);
+
+        // Update the image view with the highlighted image
+        img.setImageBitmap(mutableBitmap);
     }
 
 
@@ -152,7 +237,8 @@ public class MainActivity extends AppCompatActivity {
             textview.setVisibility(View.GONE);
             img.setImageURI(selectedImageUri);
             pb.setVisibility(View.GONE);
-            detectBtn.setVisibility(View.VISIBLE);
+            detectBtn.setVisibility(View.INVISIBLE);
+            detectBtn2.setVisibility(View.VISIBLE);
             img.setVisibility(View.VISIBLE);
             // Load image using Glide
             Glide.with(this)
@@ -167,52 +253,52 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show();
         }
     }
-    private void detectTxt() throws IOException {
-        FirebaseVisionImage image;
-        image = FirebaseVisionImage.fromFilePath(this,selectedImageUri);
-        FirebaseVisionTextDetector detector = FirebaseVision.getInstance().getVisionTextDetector();
-        detector.detectInImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
-            @Override
-            public void onSuccess(FirebaseVisionText firebaseVisionText) {
-              
-                processTxt(firebaseVisionText);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MainActivity.this, "Fail to detect the text from image...", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    private void detectTxt() throws IOException {
+//        FirebaseVisionImage image;
+//        image = FirebaseVisionImage.fromFilePath(this,selectedImageUri);
+//        FirebaseVisionTextDetector detector = FirebaseVision.getInstance().getVisionTextDetector();
+//        detector.detectInImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
+//            @Override
+//            public void onSuccess(FirebaseVisionText firebaseVisionText) {
+//
+//                processTxt(firebaseVisionText);
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                Toast.makeText(MainActivity.this, "Fail to detect the text from image...", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
-    private void processTxt(FirebaseVisionText text) {
-  
-        List<FirebaseVisionText.Block> blocks = text.getBlocks();
-
-   
-        if (blocks.size() == 0) {
-          
-            Toast.makeText(MainActivity.this, "No Text ", Toast.LENGTH_LONG).show();
-            return;
-        }
-        String txt = "";
-        for (FirebaseVisionText.Block block : text.getBlocks()) {
-
-            textview.setVisibility(View.VISIBLE);
-            count.setVisibility(View.VISIBLE);
-
-            txt = txt +" "+block.getText();
-            String filterTxt = filter.getText().toString().trim();
-            if (txt.toLowerCase(Locale.ROOT).contains(filterTxt.toLowerCase(Locale.ROOT))){
-                textview.setText("Detect: "+txt);
-                setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));
-            }else {
-                count.setText("Result : Not Matched!");
-                textview.setText("Detect: "+txt);
-
-            }
-        }
-    }
+//    private void processTxt(FirebaseVisionText text) {
+//
+//        List<FirebaseVisionText.Block> blocks = text.getBlocks();
+//
+//
+//        if (blocks.size() == 0) {
+//
+//            Toast.makeText(MainActivity.this, "No Text ", Toast.LENGTH_LONG).show();
+//            return;
+//        }
+//        String txt = "";
+//        for (FirebaseVisionText.Block block : text.getBlocks()) {
+//
+//            textview.setVisibility(View.VISIBLE);
+//            count.setVisibility(View.VISIBLE);
+//
+//            txt = txt +" "+block.getText();
+//            String filterTxt = filter.getText().toString().trim();
+//            if (txt.toLowerCase(Locale.ROOT).contains(filterTxt.toLowerCase(Locale.ROOT))){
+//                textview.setText("Detect: "+txt);
+//                setHighLightedText(textview, filterTxt.toLowerCase(Locale.ROOT));
+//            }else {
+//                count.setText("Result : Not Matched!");
+//                textview.setText("Detect: "+txt);
+//
+//            }
+//        }
+//    }
 
     private void setHighLightedText(TextView textview, String filterTxt) {
 

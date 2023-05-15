@@ -19,7 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
-import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
+//import com.google.firebase.ml.vision.text.FirebaseVisionTextDetector;
 
 import java.io.IOException;
 import java.util.List;
@@ -58,35 +58,35 @@ public class SelectActivity extends AppCompatActivity {
                     Toast.makeText(SelectActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
 
                 }else {
-                    try {
-                        detectTxt();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        detectTxt();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
                 }
 
             }
         });
     }
 
-    private void detectTxt() throws IOException {
-        FirebaseVisionImage image = FirebaseVisionImage.fromFilePath(this,selectedImageUri);
-       // FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(selectedImageUri);
-        FirebaseVisionTextDetector detector = FirebaseVision.getInstance().getVisionTextDetector();
-        detector.detectInImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
-            @Override
-            public void onSuccess(FirebaseVisionText firebaseVisionText) {
-
-                processTxt(firebaseVisionText);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                // handling an error listener.
-                Toast.makeText(SelectActivity.this, "Fail to detect the text from image...", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    private void detectTxt() throws IOException {
+//        FirebaseVisionImage image = FirebaseVisionImage.fromFilePath(this,selectedImageUri);
+//       // FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(selectedImageUri);
+//        FirebaseVisionTextDetector detector = FirebaseVision.getInstance().getVisionTextDetector();
+//        detector.detectInImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
+//            @Override
+//            public void onSuccess(FirebaseVisionText firebaseVisionText) {
+//
+//                processTxt(firebaseVisionText);
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                // handling an error listener.
+//                Toast.makeText(SelectActivity.this, "Fail to detect the text from image...", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
     private void imageChooser() {
         Intent i = new Intent();
@@ -114,23 +114,23 @@ public class SelectActivity extends AppCompatActivity {
             }
         }
     }
-    private void processTxt(FirebaseVisionText text) {
-        List<FirebaseVisionText.Block> blocks = text.getBlocks();
-        if (blocks.size() == 0) {
-            Toast.makeText(SelectActivity.this, "No Text ", Toast.LENGTH_LONG).show();
-            return;
-        }
-        String txt="";
-        for (FirebaseVisionText.Block block : text.getBlocks()) {
-             txt = txt+ " " +block.getText();
-            String filterTxt = filter.getText().toString();
-            if (txt.contains(filterTxt)){
-                textview.setText("Matched!");
-            }else {
-                textview.setText("Detect: "+txt+"\n\n\nResult : Not Matched!");
-            }
-        }
-    }
+//    private void processTxt(FirebaseVisionText text) {
+//        List<FirebaseVisionText.Block> blocks = text.getBlocks();
+//        if (blocks.size() == 0) {
+//            Toast.makeText(SelectActivity.this, "No Text ", Toast.LENGTH_LONG).show();
+//            return;
+//        }
+//        String txt="";
+//        for (FirebaseVisionText.Block block : text.getBlocks()) {
+//             txt = txt+ " " +block.getText();
+//            String filterTxt = filter.getText().toString();
+//            if (txt.contains(filterTxt)){
+//                textview.setText("Matched!");
+//            }else {
+//                textview.setText("Detect: "+txt+"\n\n\nResult : Not Matched!");
+//            }
+//        }
+//    }
 
 
 }

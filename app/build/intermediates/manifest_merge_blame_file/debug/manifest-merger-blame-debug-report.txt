@@ -258,63 +258,81 @@
 140                android:value="com.google.firebase.components.ComponentRegistrar" />
 140-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\da0a6b6a926a24c78daef043db210dda\transformed\firebase-auth-21.1.0\AndroidManifest.xml:69:17-82
 141            <meta-data
-141-->[com.google.firebase:firebase-database:20.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\f26aa3810345dba316bae61c7476b9ac\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
-142                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-142-->[com.google.firebase:firebase-database:20.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\f26aa3810345dba316bae61c7476b9ac\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+141-->[com.google.firebase:firebase-ml-vision:24.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\798325103f88f8f8690e9d1c9ba37c4e\transformed\firebase-ml-vision-24.1.0\AndroidManifest.xml:12:13-14:85
+142                android:name="com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar"
+142-->[com.google.firebase:firebase-ml-vision:24.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\798325103f88f8f8690e9d1c9ba37c4e\transformed\firebase-ml-vision-24.1.0\AndroidManifest.xml:13:17-108
 143                android:value="com.google.firebase.components.ComponentRegistrar" />
-143-->[com.google.firebase:firebase-database:20.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\f26aa3810345dba316bae61c7476b9ac\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
-144        </service>
-145
-146        <provider
-146-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:25:9-30:39
-147            android:name="com.google.firebase.provider.FirebaseInitProvider"
-147-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:26:13-77
-148            android:authorities="com.softitbd.booklens.firebaseinitprovider"
-148-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:27:13-72
-149            android:directBootAware="true"
-149-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:28:13-43
-150            android:exported="false"
-150-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:29:13-37
-151            android:initOrder="100" />
-151-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:30:13-36
-152
-153        <activity
-153-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-154            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-154-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-155            android:exported="false"
-155-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-156            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-156-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-157
-158        <meta-data
-158-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\3822a6e4ebc341efc173fd5966cc5f57\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-159            android:name="com.google.android.gms.version"
-159-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\3822a6e4ebc341efc173fd5966cc5f57\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-160            android:value="@integer/google_play_services_version" />
-160-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\3822a6e4ebc341efc173fd5966cc5f57\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+143-->[com.google.firebase:firebase-ml-vision:24.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\798325103f88f8f8690e9d1c9ba37c4e\transformed\firebase-ml-vision-24.1.0\AndroidManifest.xml:14:17-82
+144            <meta-data
+144-->[com.google.firebase:firebase-database:20.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\f26aa3810345dba316bae61c7476b9ac\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+145                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+145-->[com.google.firebase:firebase-database:20.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\f26aa3810345dba316bae61c7476b9ac\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+146                android:value="com.google.firebase.components.ComponentRegistrar" />
+146-->[com.google.firebase:firebase-database:20.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\f26aa3810345dba316bae61c7476b9ac\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+147            <meta-data
+147-->[com.google.firebase:firebase-ml-common:22.1.2] C:\Users\mdnur\.gradle\caches\transforms-3\a5d9930c1548b8f3f777f9e9b3f7a2cc\transformed\firebase-ml-common-22.1.2\AndroidManifest.xml:11:13-13:85
+148                android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar"
+148-->[com.google.firebase:firebase-ml-common:22.1.2] C:\Users\mdnur\.gradle\caches\transforms-3\a5d9930c1548b8f3f777f9e9b3f7a2cc\transformed\firebase-ml-common-22.1.2\AndroidManifest.xml:12:17-117
+149                android:value="com.google.firebase.components.ComponentRegistrar" />
+149-->[com.google.firebase:firebase-ml-common:22.1.2] C:\Users\mdnur\.gradle\caches\transforms-3\a5d9930c1548b8f3f777f9e9b3f7a2cc\transformed\firebase-ml-common-22.1.2\AndroidManifest.xml:13:17-82
+150            <meta-data
+150-->[com.google.firebase:firebase-installations:17.1.2] C:\Users\mdnur\.gradle\caches\transforms-3\3b716778d9901aac1575fe2140ee1567\transformed\firebase-installations-17.1.2\AndroidManifest.xml:17:13-19:85
+151                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+151-->[com.google.firebase:firebase-installations:17.1.2] C:\Users\mdnur\.gradle\caches\transforms-3\3b716778d9901aac1575fe2140ee1567\transformed\firebase-installations-17.1.2\AndroidManifest.xml:18:17-127
+152                android:value="com.google.firebase.components.ComponentRegistrar" />
+152-->[com.google.firebase:firebase-installations:17.1.2] C:\Users\mdnur\.gradle\caches\transforms-3\3b716778d9901aac1575fe2140ee1567\transformed\firebase-installations-17.1.2\AndroidManifest.xml:19:17-82
+153        </service>
+154
+155        <provider
+155-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:25:9-30:39
+156            android:name="com.google.firebase.provider.FirebaseInitProvider"
+156-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:26:13-77
+157            android:authorities="com.softitbd.booklens.firebaseinitprovider"
+157-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:27:13-72
+158            android:directBootAware="true"
+158-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:28:13-43
+159            android:exported="false"
+159-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:29:13-37
+160            android:initOrder="100" />
+160-->[com.google.firebase:firebase-common:20.3.0] C:\Users\mdnur\.gradle\caches\transforms-3\76f2220cf9c9b0ef385523f292eba220\transformed\firebase-common-20.3.0\AndroidManifest.xml:30:13-36
 161
-162        <provider
-162-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-163            android:name="androidx.startup.InitializationProvider"
-163-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-164            android:authorities="com.softitbd.booklens.androidx-startup"
-164-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-165            android:exported="false" >
-165-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-166            <meta-data
-166-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-167                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-167-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-168                android:value="androidx.startup" />
-168-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-169            <meta-data
-169-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mdnur\.gradle\caches\transforms-3\53ec39c02a5bf1e4e87f32ba4e4469e1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-170                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-170-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mdnur\.gradle\caches\transforms-3\53ec39c02a5bf1e4e87f32ba4e4469e1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-171                android:value="androidx.startup" />
-171-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mdnur\.gradle\caches\transforms-3\53ec39c02a5bf1e4e87f32ba4e4469e1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-172        </provider>
-173    </application>
-174
-175</manifest>
+162        <activity
+162-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+163            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+163-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+164            android:exported="false"
+164-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+165            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+165-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\mdnur\.gradle\caches\transforms-3\68af5744413bd868d0624b6721ff111c\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+166
+167        <meta-data
+167-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\3822a6e4ebc341efc173fd5966cc5f57\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+168            android:name="com.google.android.gms.version"
+168-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\3822a6e4ebc341efc173fd5966cc5f57\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+169            android:value="@integer/google_play_services_version" />
+169-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\mdnur\.gradle\caches\transforms-3\3822a6e4ebc341efc173fd5966cc5f57\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+170
+171        <provider
+171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+172            android:name="androidx.startup.InitializationProvider"
+172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+173            android:authorities="com.softitbd.booklens.androidx-startup"
+173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+174            android:exported="false" >
+174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+175            <meta-data
+175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+176                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+177                android:value="androidx.startup" />
+177-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mdnur\.gradle\caches\transforms-3\b729b8c296bb389026bc8c9f1c837d99\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+178            <meta-data
+178-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mdnur\.gradle\caches\transforms-3\53ec39c02a5bf1e4e87f32ba4e4469e1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+179                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+179-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mdnur\.gradle\caches\transforms-3\53ec39c02a5bf1e4e87f32ba4e4469e1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+180                android:value="androidx.startup" />
+180-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\mdnur\.gradle\caches\transforms-3\53ec39c02a5bf1e4e87f32ba4e4469e1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+181        </provider>
+182    </application>
+183
+184</manifest>
