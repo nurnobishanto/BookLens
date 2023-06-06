@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-36:/values-nb-rNO/values-nb-rNO.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-39:/values-nb-rNO/values-nb-rNO.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\0c92602ba1aba30df7af12882ef77f30\\transformed\\ImagePicker-v2.1\\res\\values-nb-rNO\\values-nb-rNO.xml",

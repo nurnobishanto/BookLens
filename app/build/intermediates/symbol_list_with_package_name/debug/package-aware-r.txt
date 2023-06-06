@@ -1346,6 +1346,7 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color colorMenuGalleryDone
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1403,6 +1404,7 @@ color dim_foreground_material_dark
 color dim_foreground_material_light
 color error_color_material_dark
 color error_color_material_light
+color fab_image_selected
 color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
@@ -2794,6 +2796,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg
+drawable border_image
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2848,6 +2851,8 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_search_black_24
+drawable icon_header_back
+drawable icon_item_selected
 drawable input_bg
 drawable loading
 drawable m3_appbar_background
@@ -3053,6 +3058,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnGalleryPickDone
 id buttonPanel
 id cPassId
 id cache_measures
@@ -3110,8 +3116,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id detect
-id detectbtn
-id detectbtn2
+id detectBtn
 id dialog_button
 id dimensions
 id direct
@@ -3163,6 +3168,7 @@ id forgot_pass
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id gallery
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -3185,11 +3191,14 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id image_view_crop
 id image_view_logo
 id image_view_state_aspect_ratio
 id image_view_state_rotate
 id image_view_state_scale
+id imgPreview
+id imgSelected
 id immediateStop
 id included
 id indeterminate
@@ -3202,6 +3211,8 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutRoot
+id layoutToolbar
 id layout_aspect_ratio
 id layout_rotate_wheel
 id layout_scale_wheel
@@ -3327,6 +3338,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycler
+id recyclerViewImages
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3439,6 +3452,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3561,6 +3575,7 @@ integer mtrl_view_gone
 integer mtrl_view_invisible
 integer mtrl_view_visible
 integer show_password_duration
+integer span_count_images
 integer status_bar_notification_info_maxnum
 integer ucrop_progress_loading_anim_time
 interpolator btn_checkbox_checked_mtrl_animation_interpolator_0
@@ -3609,6 +3624,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_gallery
+layout activity_image
 layout activity_login
 layout activity_main
 layout activity_select
@@ -3617,6 +3634,7 @@ layout activity_splash
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
+layout custom_item_layout
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -3633,6 +3651,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
+layout layout_gallery_picker_toolbar
+layout layout_image_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3833,6 +3853,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string menu_gallery_done
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -3911,6 +3932,8 @@ string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
+string select_max_photo_error
+string select_photos
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string sign_in
@@ -3921,6 +3944,7 @@ string tagline
 string title_camera
 string title_choose_image_provider
 string title_gallery
+string title_image_selected
 string ucrop_crop
 string ucrop_error_input_data_is_absent
 string ucrop_label_edit_photo
@@ -4213,6 +4237,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style DialogThemeAppCompat
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text

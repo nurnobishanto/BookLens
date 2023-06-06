@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-36:/values-zh/values-zh.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-39:/values-zh/values-zh.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\2696fae257ea2e6646904bed88766a1a\\transformed\\ucrop-2.2.6\\res\\values-zh\\values-zh.xml",

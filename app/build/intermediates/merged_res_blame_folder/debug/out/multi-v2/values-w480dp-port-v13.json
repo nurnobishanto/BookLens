@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-36:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
+            "outputFile": "com.softitbd.booklens.app-mergeDebugResources-39:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mdnur\\.gradle\\caches\\transforms-3\\b4d1ba64022591561c44e4c11c515868\\transformed\\material-1.8.0\\res\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",

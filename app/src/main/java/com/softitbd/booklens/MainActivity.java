@@ -3,10 +3,15 @@ package com.softitbd.booklens;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.ClipData;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -15,6 +20,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -31,6 +37,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.creativechintak.multiimagepicker.builder.MultiImagePicker;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -55,6 +62,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -62,23 +70,37 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    RecyclerView recyclerView;
+    ArrayList<ImageModel> list;
+    int PICK_IMAGE_MULTIPLE = 1;
+    RecyclerAdaptor adaptor;
 
 
     private static int PICTURE = 0;
-    private TouchImageView img;
+    public static TouchImageView img;
     private TextView textview,name,count;
     private EditText filter;
     private Button snapBtn;
-    private Button detectBtn,detectBtn2;
+    private Button gallery,detectBtn;
     private Uri selectedImageUri;
     private FirebaseAuth mAuth;
     private ProgressBar pb;
+    int t = 0;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // on below line we are initializing our variables.
+        list=new ArrayList<ImageModel>();
+
+        recyclerView=findViewById(R.id.recycler);
+        adaptor=new RecyclerAdaptor(list);
+        recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this,3));
+        recyclerView.setAdapter(adaptor);
+
+
+
         img = (TouchImageView) findViewById(R.id.image);
         textview = (TextView) findViewById(R.id.text);
         count = (TextView) findViewById(R.id.count);
@@ -88,42 +110,49 @@ public class MainActivity extends AppCompatActivity {
         pb.setVisibility(View.GONE);
 
         snapBtn = (Button) findViewById(R.id.snapbtn);
-        detectBtn = (Button) findViewById(R.id.detectbtn);
-        detectBtn2 = (Button) findViewById(R.id.detectbtn2);
+        gallery = (Button) findViewById(R.id.gallery);
+        detectBtn = (Button) findViewById(R.id.detectBtn);
 
+        gallery.setVisibility(View.VISIBLE);
         detectBtn.setVisibility(View.INVISIBLE);
-        detectBtn2.setVisibility(View.INVISIBLE);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
 
-        detectBtn2.setOnClickListener(new View.OnClickListener() {
+        detectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseVisionTextRecognizer textRecognizer = FirebaseVision.getInstance()
-                        .getOnDeviceTextRecognizer();
-                Bitmap bitmap = ((BitmapDrawable) img.getDrawable()).getBitmap();
-                FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
+                t=0;
+                for(int i = 0 ; i < list.size() ; i++){
+                    img.setImageURI(list.get(i).getUri());
+                    FirebaseVisionTextRecognizer textRecognizer = FirebaseVision.getInstance()
+                            .getOnDeviceTextRecognizer();
+                    Bitmap bitmap = ((BitmapDrawable) img.getDrawable()).getBitmap();
+                    FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
+                    int finalI = i;
+                    textRecognizer.processImage(image)
+                            .addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
+                                @Override
+                                public void onSuccess(FirebaseVisionText firebaseVisionText) {
+                                    // Process the detected text
+                                    if (filter.getText().toString().isEmpty()){
+                                        Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
 
-                textRecognizer.processImage(image)
-                        .addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
-                            @Override
-                            public void onSuccess(FirebaseVisionText firebaseVisionText) {
-                                // Process the detected text
-                                if (filter.getText().toString().isEmpty()){
-                                    Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
+                                    }else {
 
-                                }else {
-                                    processDetectedText(firebaseVisionText,bitmap);
+                                        processDetectedText(firebaseVisionText,bitmap, finalI);
+
+                                    }
+
                                 }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Handle the failure
+                                }
+                            });
+                }
 
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                // Handle the failure
-                            }
-                        });
 
             }
         });
@@ -146,31 +175,31 @@ public class MainActivity extends AppCompatActivity {
 
 
         // adding on click listener for detect button.
-        detectBtn.setOnClickListener(new View.OnClickListener() {
+        gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // calling a method to
-                    if (filter.getText().toString().isEmpty()){
-                        Toast.makeText(MainActivity.this,"Filter Text Empty",Toast.LENGTH_LONG).show();
 
-                    }else {
-//                        try {
-//                            detectTxt();
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-                    }
 
+
+                Intent intent = new Intent();
+                // setting type to select to be image
+                intent.setType("image/*");
+                // allowing multiple image to be selected
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_MULTIPLE);
             }
         });
 
         snapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 ImagePicker.with(MainActivity.this)
                         .crop()
                         .compress(3072)
-                        .start();
+                        .start(2);
+
                 img.setVisibility(View.GONE);
                 pb.setVisibility(View.VISIBLE);
                 detectBtn.setVisibility(View.INVISIBLE);
@@ -178,20 +207,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void processDetectedText(FirebaseVisionText firebaseVisionText, Bitmap bitmap) {
+    Bitmap tempBitmap;
+    private void processDetectedText(FirebaseVisionText firebaseVisionText, Bitmap bitmap , int i) {
         int c = 0;
+        tempBitmap = bitmap;
         // 4. Process the recognized text results
         for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
             for (FirebaseVisionText.Line line : block.getLines()) {
                 for (FirebaseVisionText.Element element : line.getElements()) {
                     // Access the extracted text and its metadata
                     String text = element.getText();
-
                     Rect boundingBox = element.getBoundingBox();
                     if (text.toLowerCase(Locale.ROOT).equals(filter.getText().toString().toLowerCase(Locale.ROOT).trim())){
-                        drawBoundingBoxOnImage(boundingBox, bitmap);
+                        drawBoundingBoxOnImage(boundingBox, tempBitmap,i);
                         c++;
+
+                        t++;
                         Toast.makeText(MainActivity.this,"Detected",Toast.LENGTH_LONG).show();
                     }
 
@@ -201,10 +232,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         count.setVisibility(View.VISIBLE);
-        count.setText("Detected : "+c);
-        detectBtn2.setVisibility(View.INVISIBLE);
+        count.setText("Total Detected : "+t);
+        list.get(i).setTitle("Detected : "+c);
+        adaptor.notifyDataSetChanged();
+        //detectBtn2.setVisibility(View.INVISIBLE);
     }
-    private void drawBoundingBoxOnImage(Rect boundingBox, Bitmap bitmap) {
+    private void drawBoundingBoxOnImage(Rect boundingBox, Bitmap bitmap,int i) {
         Bitmap mutableBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
         Canvas canvas = new Canvas(mutableBitmap);
 
@@ -216,9 +249,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Draw the bounding box on the canvas
         canvas.drawRect(boundingBox, paint);
-
+        tempBitmap = mutableBitmap;
         // Update the image view with the highlighted image
-        img.setImageBitmap(mutableBitmap);
+       // img.setImageBitmap(mutableBitmap);
+        list.get(i).setIs_bitmap(true);
+        list.get(i).setBitmap(mutableBitmap);
     }
 
 
@@ -226,30 +261,49 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK) {
-        // Image Uri will not be null for RESULT_OK
-             selectedImageUri = data.getData();
-            // Use Uri object instead of File to avoid storage permissions
-         //   img.setImageURI(selectedImageUri);
+        if (requestCode == PICK_IMAGE_MULTIPLE && resultCode == RESULT_OK && data != null) {
+            count.setVisibility(View.GONE);
+            textview.setVisibility(View.GONE);
+            img.setImageURI(selectedImageUri);
+            pb.setVisibility(View.GONE);
+            detectBtn.setVisibility(View.VISIBLE);
+            gallery.setVisibility(View.VISIBLE);
+            img.setVisibility(View.VISIBLE);
 
+            if (data.getClipData() != null) {
+                // Multiple images selected
+                ClipData clipData = data.getClipData();
+                for (int i = 0; i < clipData.getItemCount(); i++) {
+                    selectedImageUri = clipData.getItemAt(i).getUri();
+                    list.add(new ImageModel("", selectedImageUri,null,false));
+                    adaptor.notifyDataSetChanged();
+                }
+            } else if (data.getData() != null) {
+                // Single image selected
+                selectedImageUri = data.getData();
+                list.add(new ImageModel("", selectedImageUri,null,false));
+                adaptor.notifyDataSetChanged();
+            }
+        }
+        else if (resultCode == Activity.RESULT_OK) {
 
             count.setVisibility(View.GONE);
             textview.setVisibility(View.GONE);
             img.setImageURI(selectedImageUri);
             pb.setVisibility(View.GONE);
-            detectBtn.setVisibility(View.INVISIBLE);
-            detectBtn2.setVisibility(View.VISIBLE);
+            detectBtn.setVisibility(View.VISIBLE);
+            gallery.setVisibility(View.VISIBLE);
             img.setVisibility(View.VISIBLE);
-            // Load image using Glide
-            Glide.with(this)
-                    .load(selectedImageUri)
-                    .placeholder(R.drawable.loading)
-                    .error(R.drawable.error)
-                    .into(img);
+
+            selectedImageUri = data.getData();
+            list.add(new ImageModel("", selectedImageUri,null,false));
+            adaptor.notifyDataSetChanged();
+
 
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
             Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show();
-        } else {
+        }
+        else {
             Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show();
         }
     }
@@ -326,5 +380,10 @@ public class MainActivity extends AppCompatActivity {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(MainActivity.this,LoginActivity.class));
         finish();
+    }
+
+    public void clearList(View view) {
+        list.clear();
+        adaptor.notifyDataSetChanged();
     }
 }

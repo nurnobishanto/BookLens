@@ -45,12 +45,17 @@
             <ProgressBar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="25dp"
+                android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="15dp"
                 android:id="@+id/load"/>
 
             <!--text view to display our extracted text-->
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:elevation="20dp" />
             <LinearLayout
                 android:layout_marginHorizontal="15dp"
                 android:layout_width="match_parent"
@@ -62,32 +67,32 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rectangle_btn"
                     android:text="Snap"
-                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginHorizontal="5dp"
                     android:layout_weight="1"
                     android:textAllCaps="false"
                     android:textSize="20sp"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
                 <Button
-                    android:id="@+id/detectbtn"
-                    android:layout_marginHorizontal="10dp"
+                    android:id="@+id/gallery"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_btn"
+                    android:layout_weight="1"
+                    android:text="Gallery"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/detectBtn"
+                    android:layout_marginHorizontal="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rectangle_btn"
                     android:layout_weight="1"
                     android:text="@string/detect"
-                    android:textAllCaps="false"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-                <Button
-                    android:id="@+id/detectbtn2"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rectangle_btn"
-                    android:layout_weight="1"
-                    android:text="detect"
                     android:textAllCaps="false"
                     android:textSize="20sp"
                     android:textColor="@color/white"
@@ -112,12 +117,23 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold" />
             <LinearLayout
-                android:layout_margin="15dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <Button
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:onClick="clearList"
+                    android:background="#FFC107"
+                    android:textColor="#000000"
+                    android:text="Clear List"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
                 <Button
+                    android:layout_margin="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#AE0000"

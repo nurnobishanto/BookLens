@@ -51,9 +51,13 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity
+            android:name="com.softitbd.booklens.ImageActivity"
+            android:exported="false" />
         <activity
             android:name="com.softitbd.booklens.SelectActivity"
             android:exported="false" />
@@ -75,6 +79,16 @@
         <activity
             android:name="com.softitbd.booklens.MainActivity"
             android:exported="true" />
+        <activity
+            android:name="com.creativechintak.multiimagepicker.GalleryActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="com.creativechintak.multiimagepicker.StartImagePickerActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:theme="@style/DialogThemeAppCompat" />
         <activity
             android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
             android:screenOrientation="unspecified"
